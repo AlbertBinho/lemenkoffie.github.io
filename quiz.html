@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalize Seu Café</title>
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="stylesheet" href="quiz2.css ">
+    
+</head>
+<body>
+
+    <header>
+        <h1>LÊMEM KOFFIE</h1>
+        <p>O ELEGANTE AROMA DO CAFÉ PARA TODOS OS MOMENTOS.</p>
+        <a href="http://127.0.0.1:5500/empresa-21-11-main/index.html#"><img src="./img/Lemen Koffie.png" alt="" class="logo"></a>
+        
+
+
+        
+
+    <div class="quiz-container">
+        <h1>Crie Seu Café Perfeito!</h1>
+        
+        <div class="intro">
+            <p>Escolha suas preferências para personalizar o café dos seus sonhos. Cada decisão vai refletir no sabor, aroma e experiência da sua bebida. Vamos começar?</p>
+        </div>
+        
+        <form id="quiz-form">
+            <div class="question">
+                <div class="question-titulo">
+                <label for="aroma">Qual aroma você prefere?</label>
+            </div>
+                <div class="cards" id="aroma-cards">
+                    <div class="card" data-value="FLORAL" data-desc="Aromas delicados, como flores e ervas. Ideal para quem busca suavidade.">
+                        <img src="./img/aroma floral.jpg" alt="Aroma Floral">
+                        <p>Floral</p>
+                    </div>
+                    <div class="card" data-value="frutado" data-desc="Aromas de frutas frescas, cítricas ou doces. Para quem gosta de um toque mais leve e fresco.">
+                        <img src="./img/Aroma frutado.jfif" alt="Aroma Frutado">
+                        <p>Frutado</p>
+                    </div>
+                    <div class="card" data-value="chocolate" data-desc="Notas de chocolate, cacau e caramelo. Ideal para quem adora sabores mais doces e encorpados.">
+                        <img src="./img/aroma chocolate.jfif" alt="Aroma Chocolate">
+                        <p>Chocolate</p>
+                    </div>
+                    <div class="card" data-value="especiarias" data-desc="Aromas de canela, cravo e pimenta. Perfeito para quem gosta de algo exótico e quente.">
+                        <img src="./img/aroma especiarias.jfif" alt="Aroma Especiarias">
+                        <p>Especiarias</p>
+                    </div>
+                </div>
+                <p class="descricao" id="descricao-aroma">Escolha um aroma para saber mais!</p>
+            </div>
+
+            
+            <div class="question">
+                <div class="question-titulo">
+                    <label for="sabor">Qual sabor te atrai mais?</label>
+                </div>
+               
+                <div class="cards" id="sabor-cards">
+                    <div class="card" data-value="doce" data-desc="Doçura natural do café, sem necessidade de açúcar. Ideal para quem aprecia suavidade.">
+                        <img src="./img/AÇUCAR.jpg" alt="Sabor Doce">
+                        <p>Doce</p>
+                    </div>
+                    <div class="card" data-value="amargo" data-desc="Sabor intenso e forte, com pouca doçura. Para quem gosta de cafés mais robustos.">
+                        <img src="./img/AMARGO.jpg" alt="Sabor Amargo">
+                        <p>Amargo</p>
+                    </div>
+                    <div class="card" data-value="ácido" data-desc="Notas de acidez, com uma sensação fresca e vibrante. Para quem prefere cafés mais ácidos, como os originários da África.">
+                        <img src="./img/ÁCIDO.jpg" alt="Sabor Ácido">
+                        <p>Ácido</p>
+                    </div>
+                    <div class="card" data-value="rico" data-desc="Sabores profundos e encorpados, com boa complexidade. Ideal para quem gosta de café forte e denso.">
+                        <img src="./img/café rico.jpg" alt="Sabor Rico">
+                        <p>Rico</p>
+                    </div>
+                </div>
+                <p class="descricao" id="descricao-sabor">Escolha um sabor para saber mais!</p>
+            </div>
+
+            <!-- Pergunta sobre o formato -->
+            <div class="question">
+                <label for="formato">Qual formato você prefere?</label>
+                <div class="cards" id="formato-cards">
+                    <div class="card" data-value="grãos" data-desc="Grãos inteiros preservam o sabor e frescor por mais tempo. Ideal para quem tem um moedor em casa.">
+                        <img src="./img/grão.jpg" alt="Formato Grãos Inteiros">
+                        <p>Grãos Inteiros</p>
+                    </div>
+                    <div class="card" data-value="torrado" data-desc="Grãos já torrados. Prontos para uso, mas perdem frescor mais rapidamente.">
+                        <img src="./img/torrado.jpg" alt="Formato Torrado">
+                        <p>Torrado</p>
+                    </div>
+                    <div class="card" data-value="moído" data-desc="Grãos moídos na hora, prontos para preparar. Ideal para quem prefere praticidade.">
+                        <img src="./img/moido.jpg" alt="Formato Moído">
+                        <p>Moído</p>
+                    </div>
+                </div>
+                <p class="descricao" id="descricao-formato">Escolha um formato para saber mais!</p>
+            </div>
+
+            <!-- Pergunta sobre o preparo -->
+            <div class="question">
+                <label for="preparo">Como você prefere preparar seu café?</label>
+                <div class="cards" id="preparo-cards">
+                    <div class="card" data-value="moka/expresso" data-desc="Um método bastante antigo que funciona sob pressão, sendo o responsável por preparar um café encorpado e um pouco mais forte do que o comum.">
+                        <img src="./img/espresso2.jfif" alt="Café Espresso">
+                        <p>Espresso</p>
+                    </div>
+                    <div class="card" data-value="coado" data-desc="O método coado pode ser feito em filtro de papel ou tecido. O método de preparação é, sem dúvida nenhuma, o mais tradicional entre todos os cafés.">
+                        <img src="./img/coado.jfif" alt="Café Coado">
+                        <p>Coado</p>
+                    </div>
+                    <div class="card" data-value="francesa" data-desc="Prensa Francesa, ou French Press, é uma cafeteira manual que prepara um café mais forte, encorpado e com um sabor um pouco mais ácido.">
+                        <img src="./img/prensa francesa.jfif" alt="Prensa Francesa">
+                        <p>Prensa Francesa</p>
+                    </div>
+                    <div class="card" data-value="aquecido" data-desc="Café gelado, ideal para quem prefere bebidas refrescantes e com um toque de modernidade.">
+                        <img src="img/café gelado.jfif" alt="Café Gelado">
+                        <p>Gelado</p>
+                    </div>
+                </div>
+                <p class="descricao" id="descricao-preparo">Escolha uma forma de preparo para saber mais!</p>
+            </div>
+
+            <!-- Pergunta sobre o destino -->
+            <div class="question">
+                <label for="destino">Esse café é para você ou para presentear?</label>
+                <div class="cards" id="destino-cards">
+                    <div class="card" data-value="para_mim" data-desc="Escolha este para uma experiência pessoal e única.">
+                        <img src="./img/cafe comprado.jfif" alt="Para Mim">
+                        <p>Para Mim</p>
+                    </div>
+                    <div class="card" data-value="para_presentear" data-desc="Perfeito para presentear alguém especial com um café personalizado.">
+                        <img src="./img/presente café.jfif" alt="Para Presentear">
+                        <p>Para Presentear</p>
+                    </div>
+                </div>
+                <p class="descricao" id="descricao-destino">Escolha um destino para saber mais!</p>
+            </div>
+
+            <button type="submit" class="submit-btn">Criar Café</button>
+        </form>
+
+        <div id="resultado" class="resultado">
+            <h2>Seu Café Personalizado</h2>
+            <p id="cafe-desc">Baseado nas suas preferências, o seu café será incrível!</p>
+        </div>
+    </div>
+
+    <script>
+        // Função para atualizar a descrição com base na escolha do usuário
+        document.querySelectorAll('.card').forEach(function(cardElement) {
+            cardElement.addEventListener('click', function() {
+                let description = cardElement.getAttribute('data-desc');
+                let id = cardElement.parentElement.id;
+                let descricaoElement = document.getElementById('descricao-' + id.split('-')[0]);
+                descricaoElement.textContent = description;
+
+                // Marca a opção selecionada visualmente
+                cardElement.parentElement.querySelectorAll('.card').forEach(function(card) {
+                    card.classList.remove('selected');
+                });
+                cardElement.classList.add('selected');
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assinatura de Café - Lêmen Koffie</title>
+  <link rel="stylesheet" href="clube.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Clube de Assinatura Lêmen Koffie</h1>
+    <form id="coffeeForm">
+      <label for="coffeeQuantity">Escolha a quantidade de cafés (3 a 12):</label>
+      <input type="number" id="coffeeQuantity" name="coffeeQuantity" min="3" max="12" required>
+      
+      <label for="moagem">Escolha o tipo de moagem:</label>
+      <select id="moagem" name="moagem" required>
+        <option value="grao">Em grão</option>
+        <option value="moido">Já moído</option>
+      </select>
+      
+      <label for="torra">Escolha o tipo de torra:</label>
+      <select id="torra" name="torra" required>
+        <option value="media">Torra média</option>
+        <option value="clara">Torra clara</option>
+        <option value="escura">Torra escura</option>
+      </select>
+      
+      <button type="button" id="nextStepBtn">Próximo</button>
+    </form>
+
+    <!-- Seção de Exibição do Plano -->
+    <div id="planSection" style="display:none;">
+      <h2>Resumo da Sua Assinatura</h2>
+      <div id="planInfo"></div>
+      <button type="button" onclick="subscribe()">Confirmar Assinatura</button>
+    </div>
+
+    <!-- Modal de Confirmação -->
+    <div id="modal" style="display:none;">
+      <div class="modal-content">
+        <p id="confirmation-text"></p>
+        <button onclick="closeModal()">Fechar</button>
+        <button onclick="showPaymentMethods()">Confirmar</button>
+      </div>
+    </div>
+
+    <!-- Modal de Pagamento -->
+    <div id="paymentModal" style="display:none;">
+      <h2>Escolha o Método de Pagamento</h2>
+      <button onclick="confirmPayment('Cartão de Crédito')">Cartão de Crédito</button>
+      <button onclick="confirmPayment('Boleto Bancário')">Boleto Bancário</button>
+      <button onclick="confirmPayment('PayPal')">PIX</button>
+      <button onclick="closePaymentModal()">Fechar</button>
+    </div>
+  </div>
+
+  <script src="clube.js"></script>
+</body>
+</html>
